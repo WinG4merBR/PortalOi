@@ -1,7 +1,7 @@
 {
-  "name": "clarointerface",
+  "name": "oiinterface",
   "version": "1.0.0",
-  "description": "Interface de configuração do modem Claro",
+  "description": "Interface de configuração do modem Oi",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
