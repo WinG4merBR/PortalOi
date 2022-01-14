@@ -16,5 +16,6 @@ router.get("/prepago", (req, res) => {
 
 router.get("/oipontos", (req, res) => {
     res.status(200).render("../public/pages/examples/oipontos.ejs");
-})
+});
+
 module.exports = router;

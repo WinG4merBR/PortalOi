@@ -17,4 +17,14 @@ router.get("/", (req, res) => {
     }
 });
 
+router.get("/modem", (req, res) => {
+    if(!req.session.user) {
+        res.status(401).redirect("/");
+    } else {
+        res.status(200).render("../public/pages/modem/modem.ejs", {
+            user: req.session.user,
+        });
+    }
+});
+
 module.exports = router;

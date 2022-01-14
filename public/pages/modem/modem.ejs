@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="../assets/po3.png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/mainPage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script href="../js/playAudio.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <br>
+        <img class="logo" src="../assets/oi2.png">
+        <h3 class="title">Modem</h3>
+    </div>
+    <br><br>
+
+    <div class="message">
+        Olá! <%= user %>! Aqui você poderá configurar o seu modem!<br>
+    </div>
+
+    <div class="dashboard">
+        <h3 class="help">O que deseja configurar?
+        </h3>
+        <a href="/tutorial"><button class="velox">Verificar IPV4</button></a>
+        <a href="/tutorial"><button>Verificar IPV6</button></a>
+        <a href="/tutorial"><button>Habilitar/Desabilitar IP Fixo</button></a>
+        <a href="/tutorial"><button>Configurar Firewall</button></a>
+        <a href="/tutorial"><button>Configurar DNS</button></a>
+    </div>
+</body>
+
+</html>
