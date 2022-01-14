@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="../assets/po3.png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/mainPage.css">
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo" src="../assets/logooi.png">
+        <h3 class="title">Portal Oi</h3>
+    </div>
+    <br><br>
+
+    <div class="message">
+        Oi! Para ter acesso a sua conta Oi faça o seu login com o seu número Oi e senha!<br>
+        Caso não seja cliente Oi, <a href="/register">cadastre-se</a>!<br>
+    </div>
+
+    <div class="login">
+        <form action="/submit" method="post">
+            <h1>Login</h1>
+            <input type="text" name="ddd" placeholder="DDD" required minlength="2" maxlength="2">
+            <input type="text" name="number" placeholder="Número Oi" required minlength="8" maxlength="9">
+            <br>
+            <br>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

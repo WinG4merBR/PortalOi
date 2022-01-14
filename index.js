@@ -8,9 +8,9 @@ app.use(express.static('./public/pages'));
 
 app.set('view engine', 'ejs');
 
-app.use('/', require("./src/routes/controller/updatePage"));
-app.use('/', require("./src/routes/controller/redirectPage"));
-app.use('/', require("./src/routes/auth/oauth"));
+app.use('/', require("./routes/controller/updatePage"));
+app.use('/', require("./routes/controller/redirectPage"));
+app.use('/', require("./routes/auth/oauth"));
 
 app.listen(8081, () => {
     console.info("Ready!");
