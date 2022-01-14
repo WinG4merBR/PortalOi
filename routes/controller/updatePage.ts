@@ -1,4 +1,4 @@
-const express = require("express");
+import express from 'express';
 const router = express.Router();
 
 router.use(require("express-session")({
@@ -7,7 +7,7 @@ router.use(require("express-session")({
     saveUninitialized: false
 }));
 
-router.get("/", (req, res) => {
+router.get("/", (req: any, res: any) => {
      if (!req.session.user) {
         res.status(200).render("../public/pages/logged-off/index.ejs");
     } else {
@@ -18,7 +18,7 @@ router.get("/", (req, res) => {
     }
 });
 
-router.get("/modem", (req, res) => {
+router.get("/modem", (req: any, res: any) => {
     if(!req.session.user) {
         res.status(401).redirect("/");
     } else {
@@ -28,4 +28,4 @@ router.get("/modem", (req, res) => {
     }
 });
 
-module.exports = router;
+export = router;

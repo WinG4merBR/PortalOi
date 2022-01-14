@@ -2,12 +2,12 @@ const express = require("express");
 const router = express.Router();
 const user = require("../../database/connect");
 
-router.post("/submit", async (req, res) => {
-    const ddd = await req.body.ddd;
-    const number = await req.body.number;
-    const password = await req.body.password;
+router.post("/submit", async (req:any, res:any) => {
+    const ddd: string = await req.body.ddd;
+    const number: string = await req.body.number;
+    const password: string = await req.body.password;
 
-    const numberCheck = `(${ddd})` + `${number}`;
+    const numberCheck: string = `(${ddd})` + `${number}`;
 
     const userdata = await user.findOne({
         where: {
@@ -16,7 +16,7 @@ router.post("/submit", async (req, res) => {
     });
 
     if(!userdata) return res.status(404).send("Usuário não encontrado");
-    const passwordCheck = await userdata.password;
+    const passwordCheck: string = await userdata.password;
 
     if (password !== passwordCheck) return res.status(401).send("Senha incorreta!");
 
@@ -26,20 +26,20 @@ router.post("/submit", async (req, res) => {
     res.redirect("/");
 });
 
-router.get("/logout", (req, res) => {
+router.get("/logout", (req: any, res: any) => {
     req.session.destroy();
     res.redirect("/");
 });
 
-router.get("/register", (req, res) => {
+router.get("/register", (req: any, res: any) => {
     res.render("../public/pages/logged-off/register.ejs");
 });
 
-router.post("/register/submit", async (req, res) => {
-    const ddd = req.body.ddd;
-    const number = req.body.number;
-    const password = req.body.password;
-    const name = req.body.name;
+router.post("/register/submit", async (req: any, res: any) => {
+    const ddd: string = req.body.ddd;
+    const number: string = req.body.number;
+    const password: string = req.body.password;
+    const name: string = req.body.name;
 
     const userdata = await user.findOne({ number: `(${ddd})` + `${number}` });
     if (userdata) return res.redirect("/");
@@ -51,4 +51,4 @@ router.post("/register/submit", async (req, res) => {
     });
     res.redirect("/");
 });
-module.exports = router
+export = router
