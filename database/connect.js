@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://pui:celoiqua@cluster0.ykpor.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+mongoose.connect(process.env.URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
