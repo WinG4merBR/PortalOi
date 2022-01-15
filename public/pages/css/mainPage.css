@@ -13,7 +13,7 @@
 }
 
 .help {
-    margin-left: 5%;
+    margin-left: 2%;
 }
 
 .dashboard {
@@ -28,13 +28,26 @@ h3, h1 {
 }
 .message {
     font-family: sans-serif;
-    margin-left: 5%;
+    margin-left: 24%;
     font-size: 1.5em;
+}
+
+.fa-message {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    margin-top: 2%;
+    margin-left: 28%;
+}
+
+.da-message {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    margin-left: 7%;
 }
 
 .login {
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 28%;
 }
 
 .login input {
